@@ -1,0 +1,38 @@
+{
+  "name": "pdf-samenvoegen",
+  "version": "1.0.0",
+  "description": "Merge your own PDFs in a confirmed order. Upload files to your connected account, check names and page counts, confirm the order and download one PDF. Up to five files, 5 MB each and 25 MB total. Files expire after forty minutes and are removed from active storage within one hour.",
+  "author": {
+    "name": "Samautomation",
+    "url": "https://pdfsamenvoegen.nl",
+    "email": "support@pdfsamenvoegen.nl"
+  },
+  "homepage": "https://pdfsamenvoegen.nl/plugin/",
+  "repository": "https://github.com/smrht/pdfsamenvoegen-agent-plugin",
+  "license": "MIT",
+  "mcpServers": "./.mcp.json",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "PDF Samenvoegen",
+    "shortDescription": "Merge your own PDFs",
+    "longDescription": "Merge your own PDFs in a confirmed order. Upload files to your connected account, check names and page counts, confirm the order and download one PDF. Up to five files, 5 MB each and 25 MB total. Files expire after forty minutes and are removed from active storage within one hour.",
+    "developerName": "Samautomation",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://pdfsamenvoegen.nl/plugin/",
+    "supportURL": "https://pdfsamenvoegen.nl/contact/",
+    "privacyPolicyURL": "https://pdfsamenvoegen.nl/plugin/privacy/",
+    "termsOfServiceURL": "https://pdfsamenvoegen.nl/voorwaarden/",
+    "defaultPrompt": [
+      "Welke PDF-bestanden heb ik klaargezet?",
+      "Zet mijn gekozen PDF-bestanden in deze volgorde.",
+      "Voeg de bevestigde bestanden samen."
+    ],
+    "brandColor": "#0E4F5A",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg"
+  }
+}

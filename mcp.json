@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "pdf-samenvoegen": {
+      "type": "streamable-http",
+      "url": "https://pdfsamenvoegen.nl/mcp"
+    }
+  }
+}
