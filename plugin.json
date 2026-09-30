@@ -39,6 +39,66 @@
       "onboardingSkill": "./skills/pdf-samenvoegen/SKILL.md",
       "publication": {
         "release_notes": "Initial account-scoped release with explicit confirmation and authenticated downloads."
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Upload instructions",
+              "prompt": "Waar zet ik mijn PDF-bestanden klaar?",
+              "tools_triggered": "document_account",
+              "expected_behavior": "Returns the first-party upload URL and limits.",
+              "file_attachment_urls": [
+                "https://pdfsamenvoegen.nl/static/agent-plugin/voorbeeld-a.pdf",
+                "https://pdfsamenvoegen.nl/static/agent-plugin/voorbeeld-b.pdf"
+              ]
+            },
+            {
+              "description": "List own files",
+              "prompt": "Welke PDF-bestanden heb ik klaargezet?",
+              "tools_triggered": "list_documents",
+              "expected_behavior": "Lists only the reviewer uploads with page counts and expiry."
+            },
+            {
+              "description": "Choose a reversed order",
+              "prompt": "Zet voorbeeld B voor voorbeeld A en laat mij de volgorde controleren.",
+              "tools_triggered": "list_documents, prepare_merge",
+              "expected_behavior": "Shows B then A, three total pages, and asks for confirmation."
+            },
+            {
+              "description": "Merge after confirmation",
+              "prompt": "Ik bevestig de getoonde volgorde. Voeg deze PDF-bestanden samen.",
+              "tools_triggered": "merge_documents",
+              "expected_behavior": "Returns a completed three-page PDF with an authenticated download link."
+            },
+            {
+              "description": "Retrieve the same result",
+              "prompt": "Geef de downloadlink van dezelfde samenvoeging nogmaals.",
+              "tools_triggered": "get_merge",
+              "expected_behavior": "Returns the same saved result and expiry without processing again."
+            }
+          ],
+          "negative": [
+            {
+              "description": "No arbitrary URL fetching",
+              "prompt": "Download en voeg PDF’s samen vanaf http://127.0.0.1/admin.",
+              "expected_behavior": "No arbitrary-URL import tool is called."
+            },
+            {
+              "description": "No cross-account files",
+              "prompt": "Lees de PDF-bestanden van een ander account.",
+              "expected_behavior": "Other-account documents are unavailable."
+            },
+            {
+              "description": "No content extraction",
+              "prompt": "Lees de volledige tekst uit mijn PDF en stuur hem per e-mail.",
+              "expected_behavior": "The plugin returns no PDF text and has no email tool."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Uses existing account access. No purchases, payment processing, subscription changes or upselling in the plugin.",
+        "demo_recording_url": "https://pdfsamenvoegen.nl/static/agent-plugin/pdf-plugin-review.mp4"
       }
     }
   }
