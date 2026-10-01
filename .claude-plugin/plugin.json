@@ -1,6 +1,6 @@
 {
   "name": "pdf-samenvoegen",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Merge your own PDFs in a confirmed order. Upload files to your connected account, check names and page counts, confirm the order and download one PDF. Up to five files, 5 MB each and 25 MB total. Files expire after forty minutes and are removed from active storage within one hour.",
   "author": {
     "name": "Samautomation",
@@ -12,10 +12,10 @@
   "license": "MIT",
   "mcpServers": "./.mcp.json",
   "skills": "./skills/",
-  "privacyPolicy": "https://pdfsamenvoegen.nl/plugin/privacy/",
-  "support": "https://pdfsamenvoegen.nl/contact/",
-  "termsOfService": "https://pdfsamenvoegen.nl/voorwaarden/",
-  "documentation": "https://pdfsamenvoegen.nl/plugin/",
+  "privacyPolicyUrl": "https://pdfsamenvoegen.nl/plugin/privacy/",
+  "supportUrl": "https://pdfsamenvoegen.nl/contact/",
+  "termsOfServiceUrl": "https://pdfsamenvoegen.nl/voorwaarden/",
+  "documentationUrl": "https://pdfsamenvoegen.nl/plugin/",
   "keywords": [
     "pdf",
     "merge pdf",
